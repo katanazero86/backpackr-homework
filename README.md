@@ -4,6 +4,8 @@
 ```
 - @vue/cli 4.3.1 로 vue 프로젝트 생성
 - github 저장소 생성 및 초기 설정 및 commit & push
+- scss 작성을 위한 npm 모듈 설치
+> npm install -D sass-loader sass
 
 ```
 

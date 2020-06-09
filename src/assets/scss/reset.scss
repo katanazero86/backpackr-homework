@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Jua|Noto+Sans+KR&display=swap');
+
+* {
+  font-family: 'Noto Sans KR', 'Jua', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+}

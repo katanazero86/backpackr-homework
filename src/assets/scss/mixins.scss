@@ -1,0 +1,30 @@
+// overflow
+@mixin overflow() {
+  overflow: auto;
+}
+
+// flex
+
+@mixin dFlex($type : 'row') {
+  @if $type == 'row' {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }@else {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@mixin dFlexWrap($type : 'row') {
+  @if $type == 'row' {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }@else {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
