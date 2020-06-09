@@ -5,7 +5,7 @@
         </p>
         <div class="card-list-wrap">
             <div class="card-list-body">
-                <template v-for="(test, index) in Array(4)">
+                <template v-for="(test, index) in Array(5)">
                     <CardComponent class="card-item" :key="index"/>
                 </template>
             </div>
@@ -73,8 +73,13 @@
         padding: 12px;
 
         .card-list-body {
-            @include dFlex();
+            @include dFlexWrap();
             align-items: center;
+
+            .card-item {
+                flex-basis: 25%;
+                min-width: 0;
+            }
         }
 
         @include mobile() {
@@ -83,8 +88,7 @@
                 @include dFlexWrap();
                 justify-content: space-between;
                 .card-item {
-                    flex-basis: 48%;
-                    flex-grow: 1;
+                    flex-basis: 50%;
                 }
             }
 

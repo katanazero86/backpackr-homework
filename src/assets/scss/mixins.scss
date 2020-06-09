@@ -3,8 +3,16 @@
   overflow: auto;
 }
 
-// flex
+// text-overflow
+@mixin textOverflow() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+
+
+// flex
 @mixin dFlex($type : 'row') {
   @if $type == 'row' {
     display: flex;
