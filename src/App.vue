@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <nav id="nav">
-      <router-link to="/">Index</router-link>
-    </nav>
+<!--    <nav id="nav">-->
+<!--      <router-link to="/">Index</router-link>-->
+<!--    </nav>-->
     <router-view/>
   </div>
 </template>
