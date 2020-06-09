@@ -1,5 +1,16 @@
 # backpackr-homework
 
+## project setting
+```
+- @vue/cli 4.3.1 로 vue 프로젝트 생성
+- github 저장소 생성 및 초기 설정 및 commit & push
+
+```
+
+
+
+---
+
 ## Project setup
 ```
 npm install
