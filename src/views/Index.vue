@@ -11,6 +11,13 @@
             </div>
         </div>
 
+        <div class="horizontal-card-list-wrap">
+            <div class="horizontal-card-list-body">
+                <template v-for="(test, index) in Array(2)">
+                    <CardComponent class="card-item" cardMode="horizontal" :key="index"/>
+                </template>
+            </div>
+        </div>
 
         <hr>
         <p>
@@ -70,12 +77,11 @@
     .card-list-wrap {
         @include dFlex();
         justify-content: center;
-        padding: 12px;
+        padding: 6px;
 
         .card-list-body {
             @include dFlexWrap();
             align-items: center;
-
             .card-item {
                 flex-basis: 25%;
                 min-width: 0;
@@ -87,8 +93,36 @@
             .card-list-body {
                 @include dFlexWrap();
                 justify-content: space-between;
+                align-items: flex-start;
                 .card-item {
                     flex-basis: 50%;
+                }
+            }
+
+        }
+
+    }
+
+    .horizontal-card-list-wrap {
+
+        @include dFlex();
+        padding: 6px;
+
+        .horizontal-card-list-body {
+            @include dFlexWrap();
+            width: 100%;
+
+            .card-item {
+                flex-grow: 1;
+                flex-basis: 50%;
+                min-width: 0;
+            }
+        }
+
+        @include mobile() {
+            .horizontal-card-list-body {
+                .card-item {
+                    flex-basis: 100%;
                 }
             }
 
