@@ -2,25 +2,25 @@
     <div class="card-wrap" :class="cardMode && `card-horizontal`">
         <article class="card-body">
             <section class="card-image-section">
-                <img src="@/assets/imgs/testImage.png" alt="product" title="produce image">
+                <img :src="imageUrl" alt="product" title="produce image">
             </section>
 
             <section class="card-contents-wrap">
                 <section class="card-contents-section">
                 <span class="card-label">
-                    card label
+                    {{cardLabel}}
                 </span>
                     <h3 class="card-title">
-                        card title
+                        {{cardTitle}}
                     </h3>
                     <p class="card-information">
-                        card content
+                        {{cardContent}}
                     </p>
                 </section>
                 <section class="card-score-section">
                     <div class="score-icon">
                         <template v-for="(scoreNumber, index) in Array(5)">
-                            <template v-if="index + 1 >= score">
+                            <template v-if="index + 1 <= score">
                                 <span :key="index" class="score-on"></span>
                             </template>
                             <template v-else>
@@ -41,6 +41,10 @@
     export default {
         name: "CardComponent",
         props: {
+            imageUrl : {type: String, default : ''},
+            cardLabel : {Type: String, default : ''},
+            cardTitle : {Type: String, default : ''},
+            cardContent : {Type: String, default: ''},
             cardMode: {
                 type: String,
                 validator: function (value) {
@@ -160,18 +164,18 @@
                 .card-contents-section {
 
                     .card-label {
-                        font-size: 14px;
+                        font-size: 13px;
                         color: #b8b8b8;
                     }
 
                     .card-title {
-                        font-size: 19px;
+                        font-size: 15px;
                         margin-bottom: 2px;
                         color: #2b2b2b;
                     }
 
                     .card-information {
-                        
+
                     }
 
                 }
