@@ -1,15 +1,19 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
+
+// vuex modules
+import orderModule from './modules/orderModule/index';
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    modules: {
+        orderModule
+    },
+    state: {
+        rootStateTest: 'root'
+    },
+    getters: {},
+    mutations: {},
+    actions: {}
 })
