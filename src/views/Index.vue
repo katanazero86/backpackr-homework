@@ -1,6 +1,19 @@
 <template>
     <div class="index-wrap">
         <p>
+            과제 1. 카드 UI
+        </p>
+        <div class="card-list-wrap">
+            <div class="card-list-body">
+                <template v-for="(test, index) in Array(4)">
+                    <CardComponent class="card-item" :key="index"/>
+                </template>
+            </div>
+        </div>
+
+
+        <hr>
+        <p>
             과제 2. 입력 폼 UI
         </p>
         <InputComponent @save="saveOrderRequestMessage" :initOrderRequestMessage="orderRequestMessage"/>
@@ -20,10 +33,11 @@
     const NAME_SPACE = 'orderModule';
 
     import InputComponent from "../components/input/InputComponent";
+    import CardComponent from "../components/card/CardComponent";
 
     export default {
         name: "Index",
-        components: {InputComponent},
+        components: {CardComponent, InputComponent},
 
         computed: {
             ...mapGetters({}),
@@ -47,8 +61,35 @@
 
 <style lang="scss" scoped>
 
+    @import "src/assets/scss/mixins";
+
     .index-wrap {
         padding: 2px;
+    }
+
+    .card-list-wrap {
+        @include dFlex();
+        justify-content: center;
+        padding: 12px;
+
+        .card-list-body {
+            @include dFlex();
+            align-items: center;
+        }
+
+        @include mobile() {
+            justify-content: flex-start;
+            .card-list-body {
+                @include dFlexWrap();
+                justify-content: space-between;
+                .card-item {
+                    flex-basis: 48%;
+                    flex-grow: 1;
+                }
+            }
+
+        }
+
     }
 
 </style>
