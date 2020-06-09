@@ -93,6 +93,7 @@
         .card-list-body {
             @include dFlexWrap();
             align-items: center;
+
             .card-item {
                 flex-basis: 25%;
                 min-width: 0;
@@ -104,6 +105,7 @@
                 @include dFlexWrap();
                 justify-content: space-between;
                 align-items: flex-start;
+
                 .card-item {
                     flex-basis: 49.5%;
                 }
