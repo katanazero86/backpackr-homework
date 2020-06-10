@@ -10,23 +10,23 @@
                                    imageUrl="https://image.idus.com/image/files/aed1aec94ac34f3a8c7339d4e6d73b24_512.jpg"
                                    cardLabel="난 카드라벨"
                                    cardTitle="난 카드제목"
-                                   cardContent="카드 내용"
+                                   cardContent="카드 내용!!카드 내용!!카드 내용!!카드 내용!!"
                                    :score="3"/>
                 </template>
             </div>
         </div>
 
         <div class="horizontal-card-list-wrap">
-<!--            <div class="horizontal-card-list-body row-wrap align-items-center">-->
-<!--                <template v-for="(test, index) in Array(2)">-->
-<!--                    <CardHorizontalComponent class="card-item col-6 col-sm-12" :key="index"-->
-<!--                                             imageUrl="https://image.idus.com/image/files/102fa398ce50435cb0bf6581e7f58ec2_512.jpg"-->
-<!--                                             cardLabel="난 카드라벨"-->
-<!--                                             cardTitle="난 세로형 카드 제목"-->
-<!--                                             cardContent="세로형 카드 내용"-->
-<!--                                             :score="1"/>-->
-<!--                </template>-->
-<!--            </div>-->
+            <div class="horizontal-card-list-body row-wrap align-items-center">
+                <template v-for="(test, index) in Array(2)">
+                    <CardHorizontalComponent class="card-item col-6 col-sm-12" :key="index"
+                                             imageUrl="https://image.idus.com/image/files/102fa398ce50435cb0bf6581e7f58ec2_512.jpg"
+                                             cardLabel="난 카드라벨"
+                                             cardTitle="난 세로형 카드 제목"
+                                             cardContent="세로형 카드 내용"
+                                             :score="1"/>
+                </template>
+            </div>
         </div>
 
         <hr>
@@ -104,10 +104,10 @@
     .horizontal-card-list-wrap {
 
         padding: 6px;
+        max-width: 1024px;
+        margin: 0 auto;
 
         .horizontal-card-list-body {
-
-            width: 100%;
 
             .card-item {
                 min-width: 0;

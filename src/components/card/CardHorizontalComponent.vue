@@ -1,10 +1,10 @@
 <template>
     <div class="card-wrap row align-items-center">
         <article class="card-body row col-12">
-            <section class="card-image-section col-3">
+            <section class="card-image-section">
                 <img :src="imageUrl" alt="product" title="produce image">
             </section>
-            <section class="card-contents-wrap column col-9 justify-content-between">
+            <section class="card-contents-wrap column justify-content-between">
                 <section class="card-contents-section">
                 <span class="card-label">
                     {{cardLabel}}
@@ -61,13 +61,12 @@
 
             border-radius: 4px;
             border: 1px solid #e4e7ed;
+            min-width: 0;
 
             .card-image-section {
-                flex-shrink: 0;
                 img {
                     display: block;
-                    width: 100%;
-                    max-width: 200px;
+                    width: 130px;
                     object-fit: contain;
                 }
             }

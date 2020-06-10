@@ -86,7 +86,7 @@
                     }
 
                     .card-information {
-                        //@include textOverflow();
+                        @include textOverflow();
                     }
 
                 }
