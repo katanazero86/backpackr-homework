@@ -40,10 +40,10 @@
     export default {
         name: "CardHorizontalComponent",
         props: {
-            imageUrl : {type: String, default : ''},
-            cardLabel : {Type: String, default : ''},
-            cardTitle : {Type: String, default : ''},
-            cardContent : {Type: String, default: ''},
+            imageUrl: {type: String, default: ''},
+            cardLabel: {Type: String, default: ''},
+            cardTitle: {Type: String, default: ''},
+            cardContent: {Type: String, default: ''},
             score: {type: Number, default: 3}
         }
     }
