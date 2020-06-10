@@ -7,6 +7,25 @@
 - scss 작성을 위한 npm 모듈 설치
 > npm install -D sass-loader sass
 
+/src
+  /assets : 이미지, CSS, FONT 등에 대한 자원을 모아놓은 폴더
+  /components : Vue Component 들을 모아놓은 폴더
+  /directives : Vue 사용자 정의 지시어를 모아놓은 폴더
+  /mixins : Vue Mixin 을 모아놓은 폴더
+  /plugins : Vue Plugin 을 모아놓은 폴더
+  /router : vue-route 폴더
+  /store : vuex 폴더
+  /views : Vue Container Component 들을 모아놓은 폴더
+
+/tests : jest 기반 unit test 관련 폴더
+
+/public/index.html : vue 애플리케이션의 뼈대가 되는 HTML
+
+/src/App.vue : Root Component
+/src/main.js : bootstrapping Vue & webpack entry
+
+
+
 ```
 
 

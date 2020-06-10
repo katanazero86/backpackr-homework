@@ -9,6 +9,7 @@ import App from '@/App.vue';
 import Index from '@/views/Index.vue';
 import InputComponent from "@/components/input/InputComponent.vue";
 import CardComponent from "@/components/card/CardComponent";
+import CardHorizontalComponent from "@/components/card/CardHorizontalComponent";
 
 describe('component is a Vue instance', () => {
     test('App Component is a Vue instance', () => {
@@ -28,6 +29,11 @@ describe('component is a Vue instance', () => {
 
     test('CardComponent is a Vue instance', () => {
         const wrapper = shallowMount(CardComponent);
+        expect(wrapper).toBeTruthy();
+    });
+
+    test('CardHorizontalComponent is a Vue instance', () => {
+        const wrapper = shallowMount(CardHorizontalComponent);
         expect(wrapper).toBeTruthy();
     });
 

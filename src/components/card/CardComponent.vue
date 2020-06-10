@@ -38,7 +38,7 @@
 
 <script>
     export default {
-        name: "CardComponent",
+        name: 'CardComponent',
         props: {
             imageUrl: {type: String, default: ''},
             cardLabel: {Type: String, default: ''},

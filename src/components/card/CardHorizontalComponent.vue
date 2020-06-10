@@ -38,7 +38,7 @@
 
 <script>
     export default {
-        name: "CardHorizontalComponent",
+        name: 'CardHorizontalComponent',
         props: {
             imageUrl: {type: String, default: ''},
             cardLabel: {Type: String, default: ''},

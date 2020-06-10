@@ -55,7 +55,6 @@
 
     export default {
         name: "Index",
-        // eslint-disable-next-line vue/no-unused-components
         components: {CardHorizontalComponent, CardComponent, InputComponent},
 
         computed: {
