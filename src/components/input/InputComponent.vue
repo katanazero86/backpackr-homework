@@ -1,15 +1,15 @@
 <template>
     <div class="input-wrap" :class="[disabled && `input-wrap-disabled`,
     readonly && `input-wrap-readonly`]">
-        <div class="input-body">
-            <div class="input-text">
+        <div class="row input-body">
+            <div class="col-auto input-text">
                 <textarea placeholder="주문 요청사항을 입력해주세요." rows="3" :maxlength="maximumOrderRequestMessage"
                           v-model="orderRequestMessage" :disabled="disabled" :readonly="readonly"></textarea>
                 <span class="input-count">
                     {{maximumOrderRequestMessageComputed}}
                 </span>
             </div>
-            <div class="input-save" v-if="orderRequestMessage.trim() != initOrderRequestMessage.trim()">
+            <div class="col-auto input-save" v-if="orderRequestMessage.trim() != initOrderRequestMessage.trim()">
                 <button type="button" @click="$emit('save', orderRequestMessage.trim())" :disabled="disabled">Save</button>
             </div>
         </div>
@@ -51,7 +51,6 @@
         .input-body {
 
             width: 100%;
-            @include dFlex();
 
             .input-text {
                 width: 100%;

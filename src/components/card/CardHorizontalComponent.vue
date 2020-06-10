@@ -1,10 +1,10 @@
 <template>
-    <div class="card-wrap">
-        <article class="card-body">
-            <section class="card-image-section">
+    <div class="card-wrap row align-items-center">
+        <article class="card-body row col-12">
+            <section class="card-image-section col-3">
                 <img :src="imageUrl" alt="product" title="produce image">
             </section>
-            <section class="card-contents-wrap">
+            <section class="card-contents-wrap column col-9 justify-content-between">
                 <section class="card-contents-section">
                 <span class="card-label">
                     {{cardLabel}}
@@ -38,12 +38,12 @@
 
 <script>
     export default {
-        name: "CardComponent",
+        name: "CardHorizontalComponent",
         props: {
-            imageUrl: {type: String, default: ''},
-            cardLabel: {Type: String, default: ''},
-            cardTitle: {Type: String, default: ''},
-            cardContent: {Type: String, default: ''},
+            imageUrl : {type: String, default : ''},
+            cardLabel : {Type: String, default : ''},
+            cardTitle : {Type: String, default : ''},
+            cardContent : {Type: String, default: ''},
             score: {type: Number, default: 3}
         }
     }
@@ -63,13 +63,19 @@
             border: 1px solid #e4e7ed;
 
             .card-image-section {
+                flex-shrink: 0;
                 img {
+                    display: block;
                     width: 100%;
+                    max-width: 200px;
                     object-fit: contain;
                 }
             }
 
             .card-contents-wrap {
+
+                min-width: 0;
+
                 .card-contents-section {
 
                     padding: 4px;
@@ -81,7 +87,6 @@
 
                     .card-title {
                         font-size: 18px;
-                        margin-bottom: 2px;
                         color: #2b2b2b;
                     }
 
@@ -92,7 +97,7 @@
                 }
 
                 .card-score-section {
-                    border-top: 1px solid #e4e7ed;
+
                     padding: 4px;
 
                     .score-icon {
@@ -125,7 +130,6 @@
             }
 
         }
-
 
     }
 
