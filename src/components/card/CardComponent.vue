@@ -17,16 +17,7 @@
                     </p>
                 </section>
                 <section class="card-score-section">
-                    <div class="score-icon">
-                        <template v-for="(scoreNumber, index) in Array(5)">
-                            <template v-if="index + 1 <= score">
-                                <span :key="index" class="score-on"></span>
-                            </template>
-                            <template v-else>
-                                <span :key="index" class="score-off"></span>
-                            </template>
-                        </template>
-                    </div>
+                    <ScoreComponent :score="score"/>
                     <p class="score-label">
                         별점이랍니다..별점이랍니다..별점이랍니다..별점이랍니다..
                     </p>
@@ -37,8 +28,10 @@
 </template>
 
 <script>
+    import ScoreComponent from "../score/ScoreComponent";
     export default {
         name: 'CardComponent',
+        components: {ScoreComponent},
         props: {
             imageUrl: {type: String, default: ''},
             cardLabel: {Type: String, default: ''},
@@ -94,25 +87,6 @@
                 .card-score-section {
                     border-top: 1px solid #e4e7ed;
                     padding: 4px;
-
-                    .score-icon {
-                        span {
-                            height: 14px;
-                            width: 14px;
-                            background-color: #bbb;
-                            border-radius: 50%;
-                            display: inline-block;
-                            margin: 0 1px;
-                        }
-
-                        span:first-child {
-                            margin: 0;
-                        }
-
-                        .score-on {
-                            background-color: yellowgreen;
-                        }
-                    }
 
                     .score-label {
                         margin-top: 4px;

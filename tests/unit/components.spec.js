@@ -1,29 +1,22 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
+
+// eslint-disable-next-line no-unused-vars
 import store from '@/store/index';
 import VueRouter from 'vue-router';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
 localVue.use(VueRouter);
+// eslint-disable-next-line no-unused-vars
 const router = new VueRouter();
 
-import App from '@/App.vue';
-import Index from '@/views/Index.vue';
 import InputComponent from "@/components/input/InputComponent.vue";
 import CardComponent from "@/components/card/CardComponent";
 import CardHorizontalComponent from "@/components/card/CardHorizontalComponent";
+import ScoreComponent from "@/src/components/score/ScoreComponent";
 
 describe('component is a Vue instance', () => {
-    test('App Component is a Vue instance', () => {
-        const wrapper = shallowMount(App, {router, localVue});
-        expect(wrapper).toBeTruthy();
-    });
-
-    test('Index Component is a Vue instance', () => {
-        const wrapper = shallowMount(Index, {store, localVue});
-        expect(wrapper).toBeTruthy();
-    });
 
     test('InputComponent is a Vue instance', () => {
         const wrapper = shallowMount(InputComponent);
@@ -36,6 +29,11 @@ describe('component is a Vue instance', () => {
     });
 
     test('CardHorizontalComponent is a Vue instance', () => {
+        const wrapper = shallowMount(CardHorizontalComponent);
+        expect(wrapper).toBeTruthy();
+    });
+
+    test('ScoreComponent is a Vue instance', () => {
         const wrapper = shallowMount(CardHorizontalComponent);
         expect(wrapper).toBeTruthy();
     });
