@@ -14,7 +14,7 @@ const router = new VueRouter();
 import InputComponent from "@/components/input/InputComponent.vue";
 import CardComponent from "@/components/card/CardComponent";
 import CardHorizontalComponent from "@/components/card/CardHorizontalComponent";
-import ScoreComponent from "@/src/components/score/ScoreComponent";
+import ScoreComponent from "@/components/score/ScoreComponent";
 
 describe('component is a Vue instance', () => {
 
