@@ -34,7 +34,7 @@ describe('component is a Vue instance', () => {
     });
 
     test('ScoreComponent is a Vue instance', () => {
-        const wrapper = shallowMount(CardHorizontalComponent);
+        const wrapper = shallowMount(ScoreComponent);
         expect(wrapper).toBeTruthy();
     });
 
