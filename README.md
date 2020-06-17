@@ -1,4 +1,5 @@
 # backpackr-homework
+- 해당 코딩과제는 탈락한 과제 입니다. 다른 성공각을 보신 과제를 찾아보시길 바랍니다.
 
 ## project setting
 ```
